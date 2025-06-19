@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>  body {
+      font-family: Arial, sans-serif;
+      background:linear-gradient(PINK,rgb(0, 106, 255));
+      display: flex;
+      justify-content: center;
+      padding: 90px;
+    }
+    
+    .form-container {
+      background: linear-gradient(rgb(255, 183, 0),PINK,RED);
+      padding: 30px;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: inline;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 98px;
+      border: 3px solid #2556d2f0;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    .form-group input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 9px;
+      border-radius: 98px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Đăng ký thông tin mua sản phẩm iPhone 17</h2>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="name">Họ và tên:</label>
+        <input type="text" id="name" name="name" required placeholder="Nhập họ và tên">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Nhập email">
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Số điện thoại:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Nhập số điện thoại">
+      </div>
+      
+      <div class="form-group">
+        <label>Giới tính:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Nam</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Nữ</label>
+      </div>
+      
+      <button type="submit">Gửi thông tin</button>
+    </form>
+  </div>
+</style>
+</head>
+
+<body>
+    
+</body>
+</html>
