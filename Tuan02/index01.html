@@ -1,16 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> giới thiệu bản thân</title>
-    <style>body{
-        background-color:linear-gradient(to left blue , violet);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giới thiệu bản thân</title>
+  <style>
+    body {
+      background: linear-gradient(rgb(255, 205, 201), rgb(255, 234, 176));
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: small;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
+
+    .container {
+      text-align: center;
     }
-    </style>
+    h1{text-align: center;
+    color: red;}
+    p{text-align: center;
+    color: pink;}
+    .card {
+      background: linear-gradient(blue, green);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+      color: white;
+      margin: 20px 0;
+    }
+
+    .avt {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(3, 6, 2, 0.8);
+      margin-bottom: 20px;
+    }
+
+    h1, h2 {
+      margin: 10px 0;
+    }
+  </style>
 </head>
+
 <body>
-    
+  <div class="container">
+    <h1>Xin chào, mình tên là Hoàng Trọng</h1>
+    <h2>Hình ảnh :</h2>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/39/4d/14/394d1442e608d2401eb711b308f7a17b.jpg" class="avt" alt="Ảnh đại diện" />
+      <p>Mình là sinh viên TMDT của IUH</p>
+      <p>Mình đến từ TP.HCM</p>
+    </div>
+    <h2>Mình rất vui khi được làm quen với các bạn</h1>
+  </div>
 </body>
+
 </html>
