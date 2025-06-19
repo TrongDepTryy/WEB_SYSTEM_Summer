@@ -1,11 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bai03</title>
+<style>
+    body {
+      background: linear-gradient(rgb(255, 205, 201), rgb(255, 234, 176));
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:medium;
+      margin: 0;
+      display:grid;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+    }
+    table {
+    justify-content: center;
+      border-collapse: collapse; 
+      width: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    thead {
+      background-color: #2e7d32;
+      color: rgb(146, 247, 45);
+    }
+
+    th, td {
+      border: 1px solid #ccc; 
+      padding: 12px;
+      text-align: center; 
+    }
+
+    tr:nth-child(even) {
+      background-color: #e8f5e9;
+    }
+    h1{justify-content: center;
+    color:rgb(3, 98, 251);
+text-align: center;}
+
+    tr:nth-child(odd) {
+      background-color: #ffffff;
+    }
+  </style>
 </head>
 <body>
-    
-</body>
+  <h1>Thời Khóa Biểu</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Thứ</th>
+        <th>Môn</th>
+        <th>Phòng</th>
+        <th>Tiết</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2</td>
+        <td> Toán  </td>
+        <td>X11</td>
+        <td>7-9</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Vẽ</td>
+        <td>V4</td>
+        <td>10-15</td>
+      </tr>
+       <tr>
+        <td>6</td>
+        <td>Web</td>
+        <td>H10</td>
+        <td>1-16</td>
+      </tr>
+    </tbody>
+  </table>
 </html>
