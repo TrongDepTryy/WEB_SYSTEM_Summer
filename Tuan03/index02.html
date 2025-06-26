@@ -5,30 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .subgird{grid-template-columns:auto;
-        background-color: antiquewhite;
-         border-radius: 15px;
-       gap: 10px;padding: 15%; }
-        .subcard{
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            font-size: medium;
-            background-color: aqua;
-            justify-content: center;
-            align-items: center;
+    .courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
 
-        }
+.course-card {
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  padding: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  background-color: #fff; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
 
+.course-card h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-grid {
+    grid-template-columns: 1fr; 
+    padding: 10px;
+  }
+}
     </style>
 </head>
 <body>
-    <div class="subgird">
-  <div class="subcard">Toán học</div>
-  <div class="subcard">Vật lý</div>
-  <div class="subcard">Hóa học</div>
-  <div class="subcard">Sinh học</div>
-  <div class="subcard">Tin học</div>
-  <div class="subcard">Ngữ văn</div>
+  <div class="courses-grid">
+  <div class="course-card">
+    <h3>Toán học</h3>
+    <p></p>
+  </div>
+  <div class="course-card">
+    <h3>Vật lý</h3>
+    <p></p>
+  </div>
+  <div class="course-card">
+    <h3>Hóa học</h3>
+    <p></p>
+  </div>
+  <div class="course-card">
+    <h3>Sinh học</h3>
+    <p></p>
+  </div>
+  <div class="course-card">
+    <h3>Lịch sử</h3>
+    <p></p>
+  </div>
+  <div class="course-card">
+    <h3>Ngữ văn</h3>
+    <p>.</p>
+  </div>
 </div>
-
 </body>
 </html>
