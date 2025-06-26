@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thời Khoá Biểu</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f8f8f8;
+      padding: 40px;
+    }
+
+    .schedule {
+      display: grid;
+      grid-template-columns: 100px repeat(5, 1fr); 
+      gap: 1px;
+      background-color: #ccc;
+    }
+
+    .header, .cell {
+      background-color: white;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .header {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .row {
+      display: contents;
+    }
+
+    .time {
+      background-color: #eee;
+      font-weight: normal;
+    }
+
+    .subject {
+      background-color: #dff0ff;
+    }
+
+    .subject.math { background-color: #ffdede; }
+    .subject.english { background-color: #fff5cc; }
+    .subject.physics { background-color: #e0ffe0; }
+    .subject.empty { background-color: #fafafa; color: #aaa; }
+  </style>
+</head>
+<body>
+
+  <h2>🗓️ Thời Khoá Biểu</h2>
+
+  <div class="schedule">
+
+    <div class="header">Giờ</div>
+    <div class="header">Thứ 2</div>
+    <div class="header">Thứ 3</div>
+    <div class="header">Thứ 4</div>
+    <div class="header">Thứ 5</div>
+    <div class="header">Thứ 6</div>
+
+    <div class="row">
+      <div class="cell time">7:00</div>
+      <div class="cell subject math">Toán</div>
+      <div class="cell subject english">Anh</div>
+      <div class="cell subject physics">Lý</div>
+      <div class="cell subject empty">-</div>
+      <div class="cell subject math">Toán</div>
+    </div>
+
+ 
+    <div class="row">
+      <div class="cell time">8:00</div>
+      <div class="cell subject english">Anh</div>
+      <div class="cell subject empty">-</div>
+      <div class="cell subject math">Toán</div>
+      <div class="cell subject physics">Lý</div>
+      <div class="cell subject english">Anh</div>
+    </div>
+
+ 
+    <div class="row">
+      <div class="cell time">9:00</div>
+      <div class="cell subject physics">Lý</div>
+      <div class="cell subject english">Anh</div>
+      <div class="cell subject empty">-</div>
+      <div class="cell subject math">Toán</div>
+      <div class="cell subject physics">Lý</div>
+    </div>
+  </div>
+
+</body>
+</html>
