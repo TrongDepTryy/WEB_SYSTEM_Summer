@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        justify-content: center;
+        align-items: center;
+        background-color: antiquewhite;
+    }
+    #sex{display: flex; justify-content: center ;margin: 0 auto;}
+    #sv{display: flex; justify-content: center ;margin: 0 auto;}
+    #name{ justify-content: center;display: flex; margin: 0 auto;
+    display: block;
+    border: 55px;
+    padding: 5px;
+    }
+    #location{
+        display: flex; justify-content: center ;margin: 0 auto;
+    }
+    h3{ justify-content: center;display: flex; 
+    padding: 15x;
+    }
+    form{
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+}
+
+</style>
+<body>
+     <form>
+    <h1>Khảo sát khách hàng về trải nghiệm game </h1>
+    <img src="https://lienquan.garena.vn/wp-content/uploads/2024/07/img-share.jpg" atl="bg" width="500">
+   
+    <h3>Nhập tên cuả bạn:</h3>
+    <div id="name">
+       <textarea name="note" rows="2" cols="50" placeholder="Nhập tên của bạn"></textarea>
+    </div>
+
+    <h3>Lựa chọn giới tính của bạn:</h3>
+    <div id="sex">
+         <input type="radio" id="male" name="gender" value="male" />
+  <label for="male">Nam</label><br />
+   <input type="radio" id="female" name="gender" value="female" />
+  <label for="female">Nữ</label><br />
+    </div>
+    <div id="loacation">
+ <h3>Sở thích chọn vị trí (có thể chọn nhiều):</h3>
+    <input type="checkbox" id="ad" name="hobby" value="ad" />
+<label for="ad">Xạ thủ</label>
+
+ <input type="checkbox" id="sp" name="hobby" value="sp" />
+<label for="sp">Hỗ trợ</label>
+
+ <input type="checkbox" id="jg" name="hobby" value="jg" />
+<label for="jf">Đi rừng</label>
+
+ <input type="checkbox" id="tank" name="hobby" value="tank" />
+<label for="tank">Đấu sĩ</label>
+
+ <input type="checkbox" id="am" name="hobby" value="am" />
+<label for="am">Pháp sư</label>
+    </div>
+    <h3>Chọn server bạn đang chơi</h3>
+    <div id="sv">
+    <select name="Bạn chơi máy chủ nào?">
+    <option value="">-- Chọn máy chủ --</option>
+    <option value="vn">Việt Nam</option>
+    <option value="us">Hoa Kỳ</option>
+    <option value="jp">Nhật Bản</option>
+    <option value="fr">Pháp</option>
+    </select>
+    </div>
+
+
+</form>
+</body>
+</html>
