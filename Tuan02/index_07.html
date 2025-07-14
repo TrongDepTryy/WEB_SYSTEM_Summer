@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chèn Video YouTube</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf0;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 40px auto;
+    }
+
+    .video-container iframe {
+      width: 560px;
+      height: 315px;
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 600px) {
+      .video-container iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Video Giới Thiệu</h1>
+
+  <div class="video-container">
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/xCUGRN0aJzU?si=lZPGyTMiaQaC0aNu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <p style="text-align:center">Video này giới thiệu nội dung chính của sản phẩm/dịch vụ của bạn.</p>
+
+</body>
+</html>
