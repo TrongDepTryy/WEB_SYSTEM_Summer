@@ -1,11 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Đặt Bàn Quán Ăn</title>
+  <style>
+    body {
+      justify-content: center;
+      align-items: center;
+      background-color: antiquewhite;
+      font-family: Arial, sans-serif;
+    }
+
+    h1, h3 {
+      text-align: center;
+      padding: 10px;
+    }
+
+    form {
+      width: fit-content;
+      margin: 0 auto;
+      text-align: center;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    #name, #people, #datetime, #requests, #submit {
+      display: flex;
+      justify-content: center;
+      margin: 10px auto;
+    }
+
+    input, textarea, select {
+      padding: 8px;
+      width: 300px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <form>
+    <h1>Form Đặt Bàn Quán Ăn</h1>
+
+    <img src="https://simg.zalopay.com.vn/zlp-website/assets/nha_hang_6_f3ffa474ec.jpg" alt="table booking" width="450">
+
+    <h3>Nhập tên của bạn:</h3>
+    <div id="name">
+      <input type="text" name="name" placeholder="VD: Nguyễn Văn A" required>
+    </div>
+
+    <h3>Số lượng người:</h3>
+    <div id="people">
+      <input type="number" name="people" min="1" placeholder="VD: 4 người" required>
+    </div>
+
+    <h3>Chọn ngày và giờ:</h3>
+    <div id="datetime">
+      <input type="datetime-local" name="datetime" required>
+    </div>
+
+    <h3>Yêu cầu đặc biệt (nếu có):</h3>
+    <div id="requests">
+      <textarea name="special_requests" rows="4" placeholder="VD: Gần cửa sổ, không gian yên tĩnh..."></textarea>
+    </div>
+
+    <div id="submit">
+      <button type="submit" class="btn">Đặt bàn ngay</button>
+    </div>
+  </form>
+
 </body>
 </html>
