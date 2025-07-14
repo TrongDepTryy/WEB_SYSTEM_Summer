@@ -1,16 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        boximg{justify-content:center;}
-        
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thư viện ảnh (Flex)</title>
+  <style>
+    body {
+      background-color: #fdf6ec;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
 
-    </style>
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(2.05);
+    }
+  </style>
 </head>
 <body>
-    
+
+  <h1>Thư viện ảnh</h1>
+  <div class="gallery">
+    <img src="https://picsum.photos/id/1011/400/300" alt="Ảnh 1">
+    <img src="https://picsum.photos/id/1012/400/300" alt="Ảnh 2">
+    <img src="https://picsum.photos/id/1013/400/300" alt="Ảnh 3">
+    <img src="https://picsum.photos/id/1014/400/300" alt="Ảnh 4">
+    <img src="https://picsum.photos/id/1015/400/300" alt="Ảnh 5">
+    <img src="https://picsum.photos/id/1016/400/300" alt="Ảnh 6">
+  </div>
+
 </body>
 </html>
