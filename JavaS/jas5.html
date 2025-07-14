@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng hai số</title>
+</head>
+<body>
+    <h2>Hãy nhập 2 số cần tính tổng:</h2>
+    
+    <input type="text" id="so1" placeholder="Nhập số thứ nhất">
+    <input type="text" id="so2" placeholder="Nhập số thứ hai">
+    
+    <button onclick="tinhtong()">Tính tổng của hai số</button>
+    
+    <p id="tong"></p>
+
+    <script>
+        function tinhtong() {
+            var so1 = document.getElementById("so1").value;
+            var so2 = document.getElementById("so2").value;
+
+            if (so1.trim() === "" || so2.trim() === "") {
+                alert("Vui lòng nhập đầy đủ cả hai số.");
+                document.getElementById("tong").innerText = "Chưa có đủ dữ liệu đầu vào.";
+                return;
+            }
+
+            so1 = parseFloat(so1);
+            so2 = parseFloat(so2);
+
+            if (isNaN(so1) || isNaN(so2)) {
+                alert("Dữ liệu nhập vào không phải là số hợp lệ.");
+                document.getElementById("tong").innerText = "Dữ liệu không hợp lệ.";
+                return;
+            }
+
+            var tong = so1 + so2;
+            document.getElementById("tong").innerText = "Tổng: " + tong;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H2>kiem tra co so nhap hay chua</H2>
+    <input type="Hay nhp so vao day" id="so">
+    <button onclick="checkinput()">Kiem tra dau vao du lieu</button>
+    <p id="ketqua"></p>
+    <script>
+        function checkinput(){
+            var so = document.getElementById("so").value;
+            if(so === ""){
+                document.getElementById("ketqua").innerText = "chua co du lieu dau vao";
+            } else {
+                 document.getElementById("ketqua").innerText = "da co du lieu dau vao";
+            }
+            }
+            
+
+    </script>
+</body>
+</html>
