@@ -6,9 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>
-        Hay nhap 2 so can tinh tong:
-    </h2>>
+
     <input type="nhap so thu nhat" id="so1">
     <input type="nhap so thu hai" id="so2">
     <button onclick="tinhtong()">Tinh tong cua hai so </button>
@@ -19,7 +17,10 @@
             var so2 = parseFloat(document.getElementById("so2").value);
             var tong = so1 + so2;
             document.getElementById("tong").innerText = "Tong: " + tong;
+            console.log(document.getElementById("tong").innerText = "Tong: " + tong);
+            
         }
+        
     </script>
 </body>
 </html>

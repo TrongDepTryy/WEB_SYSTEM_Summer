@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng và kiểm tra giá trị</title>
+</head>
+<body>
+
+    <input type="text" id="so1" placeholder="Nhập số thứ nhất" oninput="checkvalue('so1', 'check1')">
+    <p id="check1"></p>
+
+    <input type="text" id="so2" placeholder="Nhập số thứ hai" oninput="checkvalue('so2', 'check2')">
+    <p id="check2"></p>
+
+    <button onclick="tinhtong()">Tính tổng của hai số</button>
+    <p id="tong"></p>
+
+    <script>
+        function tinhtong() {
+            var so1 = parseFloat(document.getElementById("so1").value)
+            var so2 = parseFloat(document.getElementById("so2").value)
+
+            if (isNaN(so1) || isNaN(so2)) {
+                document.getElementById("tong").innerText = "ban chua nhap day du cac o trong"
+            } else {
+                var tong = so1 + so2
+                document.getElementById("tong").innerText = "sum: " + tong
+                console.log("sum: " + tong)
+            }
+        }
+
+        function checkvalue(inputId, outputId) {
+            const value = document.getElementById(inputId).value.trim()
+
+            if (value === "") {
+                document.getElementById(outputId).innerText = "Ban chua nhap so vao o"
+            
+            } else {
+                document.getElementById(outputId).innerText = "Ban nhap chua phai dinh dang so"
+            }
+        }
+    </script>
+
+</body>
+</html>

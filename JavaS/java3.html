@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="text" id="so1">
+     
+    <button onclick="checkvalue()">Kiem tra gia tri nhap vao </button>
+    <p id="show"></p>
+
+    <script>
+        function checkvalue() {
+            const value = document.getElementById("so1").value;
+            
+            if (!isNaN(value) && value.trim() !== "") 
+            {
+                document.getElementById("show").innerText = "Bạn nhập number";
+            } 
+            else {
+                document.getElementById("show").innerText = "Bạn nhập text";
+                }
+     }
+    </script>
+</body>
+</html>
