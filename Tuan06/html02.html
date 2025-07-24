@@ -1,0 +1,37 @@
+<body>
+  <input id="hoten" placeholder="Họ tên">
+  <input id="username" placeholder="Username">
+  <input id="mail" placeholder="Email">
+  <button onclick="checkAll()">Check All</button>
+  <div id="output"></div>
+
+  <script>
+    function show(name, ok) {
+      document.getElementById("output").innerHTML += name + ": " + (ok ? "✅ hợp lệ" : "❌ không hợp lệ") + "<br>";
+    }
+
+    function hoten() {
+      const val = document.getElementById("hoten").value.trim();
+      const dem = val.split(" ").length;
+      show("Họ tên", dem >= 2);
+    }
+
+    function username() {
+      const val = document.getElementById("username").value.trim();
+      show("Username", val.length >= 5);
+    }
+
+    function mail() {
+      const str = document.getElementById("mail").value.trim();
+      const regex = /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+      show("Email", regex.test(str));
+    }
+
+    function checkAll() {
+      document.getElementById("output").innerHTML = ""; // clear kết quả cũ
+      hoten();
+      username();
+      mail();
+    }
+  </script>
+</body>
