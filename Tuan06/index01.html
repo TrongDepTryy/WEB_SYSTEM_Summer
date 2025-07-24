@@ -8,15 +8,16 @@
 
 <p><input id="datein" type="date"></p>
 <button id="checkdate">Kiểm tra ngày</button>
-<p id="message"></p>
+<p   p id="message"></p>    
 
 <script>
     function checkdate() {
         document.getElementById("checkdate").addEventListener("click", function() {
-            var selectedDate = document.getElementById("datein").value;
-            var messageElement = document.getElementById("message");
-            messageElement.textContent = "Bạn đã chọn ngày: " + selectedDate;
-        });
+                var selectedDate = document.getElementById("datein").value;
+                    var messageElement = document.getElementById("message");
+                messageElement.textContent = "Bạn đã chọn ngày: " + selectedDate;
+            }   
+        )  ;
     }
 
     checkdate();
