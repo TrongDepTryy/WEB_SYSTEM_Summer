@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So sánh ngày</title>
+</head>
+<body>
+
+<p><input id="datein" type="date"></p>
+<button id="checkdate">Kiểm tra ngày</button>
+<p id="message"></p>    
+
+<script>
+document.getElementById("checkdate").addEventListener("click", function () {
+    var selected = new Date(document.getElementById("datein").value);
+    var today = new Date();
+    selected.setHours(0,0,0,0);
+    today.setHours(0,0,0,0);
+    var msg = document.getElementById("message");
+
+    if (selected < today) {
+        msg.textContent = "Ngày quá khứ: " + selected.toISOString().slice(0,10);
+        msg.style.color = "red";
+    } else if (selected.getTime() === today.getTime()) {
+        msg.textContent = "Hôm nay: " + selected.toISOString().slice(0,10);
+        msg.style.color = "blue";
+    } else {
+        msg.textContent = "Ngày tương lai: " + selected.toISOString().slice(0,10);
+        msg.style.color = "green";
+    }
+});
+</script>
+
+</body>
+</html>

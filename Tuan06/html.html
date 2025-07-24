@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>So sánh ngày</title>
+</head>
+<body>
+
+<input id="datein" type="date">
+<button id="checkdate">Kiểm tra</button>
+<p id="message"></p>
+
+<script>
+function checkdate() {
+    document.getElementById("checkdate").addEventListener("click", function () {
+        const val = document.getElementById("datein").value;
+        const msg = document.getElementById("message");
+        if (!val) {
+            msg.textContent = "Vui lòng chọn ngày.";
+            msg.style.color = "gray";
+            return;
+        }
+
+        const selected = new Date(val);
+        const today = new Date();
+        selected.setHours(0,0,0,0);
+        today.setHours(0,0,0,0);
+
+        if (selected < today) {
+            msg.textContent = "Ngày trong quá khứ.";
+            msg.style.color = "red";
+        } else if (selected.getTime() === today.getTime()) {
+            msg.textContent = "Hôm nay.";
+            msg.style.color = "blue";
+        } else {
+            msg.textContent = "Ngày trong tương lai.";
+            msg.style.color = "green";
+        }
+    });
+}
+
+checkdate();
+</script>
+
+</body>
+</html>
