@@ -1,37 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiểm tra dữ liệu</title>
+  <style>
+    input { margin: 4px; padding: 5px; }
+    button { margin-left: 10px; }
+    .result { margin-left: 10px; font-weight: bold; }
+  </style>
+</head>
 <body>
-  <input id="hoten" placeholder="Họ tên">
-  <input id="username" placeholder="Username">
-  <input id="mail" placeholder="Email">
-  <button onclick="checkAll()">Check All</button>
-  <div id="output"></div>
+  <h2>Form kiểm tra</h2>
+
+  <!-- 1. Số điện thoại Việt Nam -->
+  <div>
+    SĐT: <input id="sdt">
+    <span class="result" id="resSdt"></span>
+  </div>
+
+  <!-- 2. Mật khẩu an toàn -->
+  <div>
+    Mật khẩu: <input id="pass">
+    <span class="result" id="resPass"></span>
+  </div>
+
+  <!-- 3. Họ và tên (ít nhất 2 từ) -->
+  <div>
+    Họ tên: <input id="fullname">
+    <span class="result" id="resName"></span>
+  </div>
+
+  <!-- 4. Số thẻ tín dụng -->
+  <div>
+    Số thẻ: <input id="card">
+    <span class="result" id="resCard"></span>
+  </div>
+
+  <!-- 5. Họ tên ít nhất 1 từ -->
+  <div>
+    Họ tên (1 từ): <input id="onetoken">
+    <span class="result" id="resOne"></span>
+  </div>
+
+  <!-- 6. Mã bệnh nhân -->
+  <div>
+    Mã bệnh nhân: <input id="maBN">
+    <span class="result" id="resBN"></span>
+  </div>
+
+  <!-- 7. Username -->
+  <div>
+    Username: <input id="user">
+    <span class="result" id="resUser"></span>
+  </div>
+
+  <!-- 8. URL -->
+  <div>
+    URL: <input id="url">
+    <span class="result" id="resUrl"></span>
+  </div>
+
+  <!-- 9. Mật khẩu mạnh -->
+  <div>
+    Mật khẩu mạnh: <input id="passmanh">
+    <span class="result" id="resPM"></span>
+  </div>
+
+  <!-- Nút kiểm tra tất cả -->
+  <div style="margin-top: 15px;">
+    <button onclick="checkAll()">✅ Kiểm tra tất cả</button>
+  </div>
 
   <script>
-    function show(name, ok) {
-      document.getElementById("output").innerHTML += name + ": " + (ok ? "✅ hợp lệ" : "❌ không hợp lệ") + "<br>";
+    function show(id, ok) {
+      const r = document.getElementById(id);
+      r.textContent = ok ? "✔️ Hợp lệ" : "❌ Không hợp lệ";
+      r.style.color = ok ? "green" : "red";
     }
 
-    function hoten() {
-      const val = document.getElementById("hoten").value.trim();
-      const dem = val.split(" ").length;
-      show("Họ tên", dem >= 2);
+    function kiemTraSDT() {
+      const val = document.getElementById("sdt").value.trim();
+      return /^0\d{9}$/.test(val);
     }
 
-    function username() {
-      const val = document.getElementById("username").value.trim();
-      show("Username", val.length >= 5);
+    function kiemTraPass() {
+      const val = document.getElementById("pass").value;
+      return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(val);
     }
 
-    function mail() {
-      const str = document.getElementById("mail").value.trim();
-      const regex = /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-      show("Email", regex.test(str));
+    function kiemTraTen() {
+      const val = document.getElementById("fullname").value.trim();
+      return val.split(/\s+/).length >= 2;
+    }
+
+    function kiemTraCard() {
+      const val = document.getElementById("card").value.replace(/\s/g, "");
+      return /^\d{16}$/.test(val);
+    }
+
+    function kiemTraMotTu() {
+      const val = document.getElementById("onetoken").value.trim();
+      return val.length > 0;
+    }
+
+    function kiemTraMaBN() {
+      const val = document.getElementById("maBN").value.trim();
+      return /^SG-\d{8}\.\d{5}$/.test(val);
+    }
+
+    function kiemTraUser() {
+      const val = document.getElementById("user").value.trim();
+      return /^\w{5,15}$/.test(val);
+    }
+
+    function kiemTraURL() {
+      const val = document.getElementById("url").value.trim();
+      return /^(https?:\/\/)?[a-zA-Z0-9\-\.]+\.[a-z]{2,}([\/\w\.\-\?\=\&\#]*)?$/.test(val);
+    }
+
+    function kiemTraPassManh() {
+      const val = document.getElementById("passmanh").value;
+      return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(val);
     }
 
     function checkAll() {
-      document.getElementById("output").innerHTML = ""; // clear kết quả cũ
-      hoten();
-      username();
-      mail();
+      show("resSdt", kiemTraSDT());
+      show("resPass", kiemTraPass());
+      show("resName", kiemTraTen());
+      show("resCard", kiemTraCard());
+      show("resOne", kiemTraMotTu());
+      show("resBN", kiemTraMaBN());
+      show("resUser", kiemTraUser());
+      show("resUrl", kiemTraURL());
+      show("resPM", kiemTraPassManh());
     }
   </script>
 </body>
+</html>
