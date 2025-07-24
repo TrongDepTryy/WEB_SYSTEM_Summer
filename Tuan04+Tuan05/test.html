@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Date</title>
+    <style>
+        .loi
+        
+         {
+            color: red;
+            font-weight: bold;
+        }
+
+        .ok {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="dateInput" placeholder="Nhập ngày: DD-MM-YYYY">
+    <button onclick="checkDate()">Check date</button>
+    <p id="result"></p>
+
+    <script>
+        function checkDate() {
+            const input = document.getElementById("dateInput").value.trim()
+            const result = document.getElementById("result")
+
+            if (input === "") {
+                result.innerText = "Please input"
+                result.className = "error"
+                return
+            }
+
+            const regex = /^(\d{2})-(\d{2})-(\d{4})$/
+            const match = input.match(regex)
+
+            if (!match) {
+                result.innerText = "Invalid date"
+                result.className = "error"
+                return
+            }
+
+            const day = parseInt(match[1])
+            const month = parseInt(match[2]) - 1
+            const year = parseInt(match[3])
+
+            const date = new Date(year, month, day)
+
+            if (
+                date.getFullYear() === year &&
+                date.getMonth() === month &&
+                date.getDate() === day
+            ) {
+                result.innerText = "Valid date"
+                result.className = "ok"
+            } else {
+                result.innerText = "Invalid date"
+                result.className = "loi"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Phone</title>
+    <style>
+        .loi {
+            color: red;
+            font-weight: bold;
+        }
+
+        .ok {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="phone" placeholder="Nhập số điện thoại">
+    <button onclick="checkPhone()">Check phone</button>
+    <p id="result"></p>
+
+    <script>
+        function checkPhone() {
+            const phone = document.getElementById("phone").value.trim()
+            const result = document.getElementById("result")
+
+            if (phone === "") {
+                result.innerText = "please input"
+                result.className = "loi"
+            } else if (/^\d{9,11}$/.test(phone)) {
+                 result.innerText = "ok"
+                    result.className = "ok"
+            }    else {
+                 result.innerText = "wrong"
+                        result.className = "loi"
+            }
+        }
+    </script>
+
+</body>
+</html>

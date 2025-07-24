@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check số</title>
+    <style>
+        .loi {
+            color: red;
+            font-weight: bold;
+        }
+
+        .ok {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="so1" placeholder="nhap gia tri">
+    <button onclick="checkSo()">Check số</button>
+    <p id="result"></p>
+
+    <script>
+        function checkSo() {
+            const value = document.getElementById("so1").value.trim()
+            const result = document.getElementById("result")
+
+            if (value === "") {
+                    result.innerText = "hay nhap input"
+                 result.className = "loi"
+            }    
+            else if (!isNaN(value)) {
+                  result.innerText = "ban nhap so"
+                    result.className = "ok"
+            } 
+            else {
+                  result.innerText = "ban chua nhap so"
+                    result.className = "loi"
+            }
+        }
+    </script>
+
+</body>
+</html>
